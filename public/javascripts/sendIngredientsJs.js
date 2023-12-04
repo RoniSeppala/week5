@@ -25,12 +25,12 @@ addInstructionButton.addEventListener('click', () => {
 submitButton.addEventListener('click', () => {
     returnJSON.name = recipeName.value
     console.log(returnJSON)
-    fetch('/recipe/', {
+    fetch('http://localhost:3000/recipe/', {
         method: "post",
         headers: {
             "Content-type": "application/json"
         },
-        body:returnJSON
+        body:JSON.stringify(returnJSON)
     }).then(response => response.json()).then(data => {
         console.log(data)
         
