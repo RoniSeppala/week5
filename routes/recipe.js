@@ -25,7 +25,7 @@ router.post('/',(req,res) => {
 
 router.get("/:food",(req, res) => {
     recipeJSON.name = req.params.food
-    
+
     res.json(recipeJSON)
 })
 module.exports = router;
