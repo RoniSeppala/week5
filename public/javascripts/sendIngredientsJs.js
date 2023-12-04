@@ -33,7 +33,7 @@ submitButton.addEventListener('click', () => {
         body:JSON.stringify(returnJSON)
     }).then(response => response.json()).then(data => {
         console.log(data)
-        
+
         returnJSON.name = ""
         returnJSON.instructions = []
         returnJSON.ingredients = []
